@@ -1,72 +1,88 @@
-# XPECTATION — meet jr.X
 
-**jr.X** is an advanced closed-source AI desktop assistant featuring an animated orb UI. It functions as an autonomous voice-and-text agent that controls desktops, runs system terminal tasks, and performs deep parallel web research.
+XPECTATION — meet jr.X
 
-* **Developer:** MasterX
-* **License:** Closed Source / Proprietary. Free for personal, non-commercial use only. (See `LICENSE` for full terms).
-* **Core Engine:** Powered by Google Gemini.
+A voice-and-text AI desktop assistant with an animated orb UI, created by MasterX. Closed source / Proprietary. Free for personal non-commercial use only. Source code is not publicly released. See LICENSE for full terms.
 
----
+Install & Launch (Windows)
 
-## 🚀 Quick Setup
+1. Download the single jrX_Setup.exe installer.
+2. Double-click the file to install jr.X directly to your system.
+3. Launch the application using the new jr.X Desktop shortcut or your Start Menu.
+4. On first launch, paste your free Gemini API key (aistudio.google.com/apikey).
 
-1. **Launch:** Run the compiled `jrX_Setup.exe` binary.
-2. **API Key Setup:** Obtain a free API key from [Google AI Studio]([https://aistudio.google.com/api-keys]). Paste it into the window prompt on the first launch.
+Features & Usage
 
----
 
-## 🌟 Key Features
+🎙️ Voice & Talk
 
-### 🎙️ Audio Clean-Up & Routing
-* **Voice Normalization:** Automatically adjusts speech levels—boosting quiet phrases and dampening shouting while avoiding clipped audio starts.
-* **Noise Suppression:** Includes *Standard* and *Strong* filters to remove rumbles and persistent background room hums.
-* **Accent Tuning:** Optimizes local recognition for mixed language accents (e.g., "English, Hindi").
+• Audio Settings: Choose your preferred microphone and speaker directly in the UI, featuring a built-in speaker test button.
+• Voice Clean-Up: Select between Standard, Strong, or Off to automatically balance volume, remove rumble, and cut background hum while preserving your speech patterns.
+• Multilingual Accents: Configure spoken languages (e.g., "English, Hindi") so jr.X perfectly understands mixed accents.
+• Wake Word: Respond to default phrase “hey junior x”. The assistant sleeps until it hears the phrase, then stays awake briefly. Detection is entirely offline.
+• Push to Talk: Bind a custom key (Default: F9) or use the on-screen Hold to talk button. Both options can run concurrently or be disabled entirely for always-listening mode.
 
-### 🤫 Wake Word & Push-to-Talk (PTT)
-* **Offline Detection:** Responds to your custom wake phrase (default: *"hey junior x"*). Processing runs completely offline to maintain private tracking until activated.
-* **PTT Mode:** Map a hotkey (default: `F9`) or use the on-screen *Hold to talk* action to toggle mic input.
+🖥️ Desktop Control & Virtual Pointer
 
-### 🖥️ On-Screen Preview Card
-* **Live Feeds:** Streams terminal strings and research tasks in a compact top-right overlay window that sits above other apps.
-* **Instant Activation:** Pops up immediately upon hearing trigger words (*research, summarise, terminal*). The overlay is fully resizable and draggable across multi-monitor setups.
+• Screen Interaction: jr.X actively reads your display and controls your mouse and keyboard.
+• Visual Anchor: A glowing virtual pointer displays precisely where the assistant is clicking or typing.
+• Safety & Overrides: Enable optional settings to require explicit user confirmation before the AI takes physical control. You can immediately abort its action at any time by moving your mouse cursor to the top-left corner of your screen.
 
-### 🌐 Browser & System Autopilot
-* **Visual Navigation:** Drives a isolated Chrome user profile to scroll, read page layouts, and click elements by sight. *Blocks password and card input zones for security.*
-* **Virtual Cursor:** Displays a distinct glowing mouse overlay to perform commands without stealing control of your physical mouse.
+🌐 Browser Automation
 
-### 📟 Protected Terminal Automation
-* **Execution Safeguards:** Instantly processes read-only metrics (`dir`, `git status`). Triggers a confirmation check overlay for file edits and outright refuses catastrophic system sweeps.
+• Playwright Engine: Full web automation capabilities out-of-the-box.
+• Reliability: Handles complex multi-tab management, bypasses invasive pop-ups, and features auto-recovery if a browser window crashes.
 
-### 🧠 System Tray & Memory
-* **Long-Term Data:** View, append, or purge records kept in core visual memory maps.
-* **Background Mode:** Runs silently from the Windows system tray; includes a "Start hidden" toggle.
+📱 Phone Remote
 
----
+• Setup: Navigate to Settings → Remote and toggle Allow control from my phone.
+• Local Connection: Scan the generated QR code using a phone connected to the exact same Wi-Fi network.
+• Usage: The phone's web page mirrors the chat interface and results. Speak or type commands directly from your mobile device. This operates entirely on your local network protected by a unique token inside the QR link (Approval prompts still safely appear on the PC).
 
-## 🧩 Built-in Plugins
+🎛️ Background, Tray, & Controls
 
-* **sheets:** Programmatically exports native `.xlsx` files with charts and dynamic formulas straight to the Desktop.
-* **quiz:** Generates responsive interactive quizzes featuring auto-grading stats.
-* **doc_review:** Scans PDF, DOCX, and TXT inputs into a summary panel.
-* **water:** Local countdown logs with automated desktop hydration notifications.
-* **telegram_remote:** Encrypted desktop management access using one-time token sync controls.
-* **chat_reply:** Pulls context from screen text to instantly draft communication templates.
-* **games:** Tracks, manages, and executes games from your local Steam library.
+• System Tray: Choose to let jr.X minimize cleanly into the system tray when closing the primary window. Click the tray icon to bring it back instantly.
+• Start Hidden: Launch option to send jr.X straight to the system tray on PC startup without breaking focus.
+• Preview Card: When compiling terminal items or running heavy background research, a compact floating status card anchors to the top-right corner of your monitor. You can drag and resize it freely.
+• Instant Interrupt: Press the ⏹ Stop button, hit Esc, use the global hotkey F8, use the system tray context menu, or simply say "stop" out loud to instantly terminate active terminal operations, scripts, browser workflows, or vocal replies.
+• System Logs: Saved locally at ~/.xpectation/jrx.log.
 
----
+🧩 Plugins
 
-## 🗣️ What You Can Say
+• Built-in Suite: Toggable modular plugins for terminal management, web research, desktop overrides, browser engines, document reviews, spreadsheet mapping, quizzes, games, Telegram remotes, chat assistance, hydration reminders, and more.
 
-* *"Research the best budget laptops and summarise"*
-* *"Open YouTube and search lo-fi music"*
-* *"Run git status in my project folder"*
-* *"Open Settings and turn on dark mode"*
-* *"Compare solar vs wind power from several sources"*
+Engines & Models (Settings → Engine)
 
----
 
-## 🛑 Instant Interruption
-Kill active voice lines, web automation tracking loops, or terminal scripts by:
-* Hitting global **`F8`** or **`Esc`** when focused.
-* Clicking **⏹ Stop** on the primary layout or the overlay card.
-* Saying the wake phrase **"stop"** out loud.
+🧠 Choose Your Brain
+
+• Model Ladder: Run an ordered fallback list of models. If your primary choice hits a rate limit, timeout, or network outage, jr.X auto-steps down to the next model in line. Offline or failed models are temporarily parked and tested for recovery later.
+• Supported Integrations: Connect seamlessly to Gemini or any OpenAI-compatible server architecture (Ollama, LM Studio, llama.cpp, vLLM, OpenAI, Groq, DeepSeek, Mistral, xAI, OpenRouter, or custom network endpoints).
+
+🛠️ Offline LLMs & Local Voice (Under Construction)
+
+• Local Models: Connect to Ollama, LM Studio, or llama.cpp to install and initialize models straight from our in-app directory with visible progress tracking.
+• Local Voice: Toggle fully offline vocal workflows combining Whisper (Speech-to-Text) and Piper (Text-to-Speech) spanning dozens of dialect options.
+• Note: While these features are in a fully working zone, they are actively being polished and optimized. You may encounter minor imperfections as they undergo active development.
+
+Executable Environment Requirements
+
+The installer bundles jr.X internally. Certain features depend on native system software being present on the target host computer:
+
+Feature	Target PC Requirement
+Browser Control	Google Chrome or Microsoft Edge installed on the system
+Local LLM Engines	Ollama or LM Studio running locally on the system
+Mouse / Screen Control	Works natively out of the box (Windows)
+Phone Remote Companion	Must allow jr.X through Windows Firewall (Private network profile)
+Local Voice Processing	Optional; downloadable models found in Settings → Engine
+
+
+Diagnostics & Troubleshooting
+
+Run a health self-test by opening a terminal window inside the installation root path and running:
+cmd
+jr.X.exe --selftest
+Use code with caution.
+
+License
+
+Proprietary. Free for personal non-commercial use only. See LICENSE for full terms. All rights reserved by MasterX.

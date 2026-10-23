@@ -122,7 +122,7 @@ If Windows asks about the firewall, allow *Private networks*.
   follows the language you speak (a switch needs a confident detection and at least three words); the Windows voice for that
   language is used if you have it installed (Windows Settings → Time & language → Speech). Whisper's model downloads the first time.
 
-### Local models: install, auto-start, auto-stop
+### Local models: install, auto-start, auto-stop (UNDER WORKING PHASE🚫)
 Settings → **Engine** → *Engine: Local app on this PC* → pick **Ollama**, **LM Studio** or **llama.cpp** → pick a model from the
 list (or type any name, e.g. `qwen3:8b`) → **Install this model**. jr.X downloads it (with progress), and from then on starts the
 app and loads the model every time it opens, and turns the model off when you quit. A server you were already running is left

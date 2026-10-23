@@ -101,11 +101,6 @@ def hello(ctx, name):
 - Voice uses Gemini's Live API; if it fails 3 times jr.X falls back to text mode.
 - Run tests: `pip install pytest && python -m pytest`
 
-## Run from source (developer)
-Double-click **INSTALL_WINDOWS.bat** (creates `.venv`, installs everything, makes a Desktop shortcut). Errors go to
-`%USERPROFILE%\.xpectation\jrx.log`. To check that browsing, app control and the pointer work on a PC:
-`.venv\Scripts\python main.py --selftest` (writes `%USERPROFILE%\.xpectation\selftest.txt`).
-
 ## Phone remote
 Control jr.X from your phone's browser, no app needed. In jr.X press **📱 Phone** (or the tray menu → *Phone remote…*),
 tick **Allow control from my phone**, and scan the QR code with a phone on the same Wi-Fi. The page shows the same chat
